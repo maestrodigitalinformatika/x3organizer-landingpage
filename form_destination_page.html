@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>X3ORGANIZER - Your Vacation, Our Priority</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="X3 Website" name="keywords" />
+    <meta content="X3 Website" name="description" />
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Custom Stylesheet -->
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .stepper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .step {
+        text-align: center;
+        position: relative;
+      }
+      .step-circle {
+        width: 40px;
+        height: 40px;
+        background: #e9ecef;
+        color: #6c757d;
+        line-height: 40px;
+        border-radius: 50%;
+        display: inline-block;
+        font-weight: bold;
+      }
+      .step p {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #6c757d;
+      }
+      .step.active .step-circle,
+      .step.active-previous .step-circle {
+        background: #007bff; /* Warna biru untuk aktif dan sebelumnya */
+        color: #fff; /* Teks putih */
+      }
+      .step.active p,
+      .step.active-previous p {
+        color: #007bff; /* Teks aktif dan sebelumnya */
+      }
+      .step-content {
+        display: none;
+      }
+      .step-content.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+            <div class="d-inline-flex align-items-center">
+              <p>
+                <i class="fa fa-envelope mr-2"></i>admin@xthreeorganizer.com
+              </p>
+              <p class="text-body px-3">|</p>
+              <p><i class="fa fa-phone-alt mr-2"></i>0823-3745-7711</p>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center text-lg-right">
+            <div class="d-inline-flex align-items-center">
+              <a
+                class="text-primary px-3"
+                href="https://www.instagram.com/x3organizer/"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <span class="text-primary">@x3organizer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="" class="navbar-brand">
+            <h1 class="m-0 text-primary">
+              <span class="text-dark">TRAVEL</span>ER
+            </h1>
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          >
+            <div class="navbar-nav ml-auto py-0">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a
+                href="form_destination_page.html"
+                class="nav-item nav-link active"
+                >Form</a
+              >
+              <a href="service.html" class="nav-item nav-link">Services</a>
+              <a href="package.html" class="nav-item nav-link">Tour Packages</a>
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  >Pages</a
+                >
+                <div class="dropdown-menu border-0 rounded-0 m-0">
+                  <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                  <a href="single.html" class="dropdown-item">Blog Detail</a>
+                  <a href="destination.html" class="dropdown-item"
+                    >Destination</a
+                  >
+                  <a href="guide.html" class="dropdown-item">Travel Guides</a>
+                  <a href="testimonial.html" class="dropdown-item"
+                    >Testimonial</a
+                  >
+                </div>
+              </div>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header">
+      <div class="container">
+        <div
+          class="d-flex flex-column align-items-center justify-content-center"
+          style="min-height: 400px"
+        >
+          <h3 class="display-4 text-white text-uppercase">Form</h3>
+          <div class="d-inline-flex text-white">
+            <p class="m-0 text-uppercase">
+              <a class="text-white" href="">Home</a>
+            </p>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <p class="m-0 text-uppercase">Form</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+    <!-- Header End -->
+    <div class="container mt-5">
+      <!-- Stepper -->
+      <div class="stepper">
+        <div class="step" id="step1">
+          <div class="step-circle">1</div>
+          <p>Info Destinasi</p>
+        </div>
+        <div class="step" id="step2">
+          <div class="step-circle">2</div>
+          <p>Info Kebutuhan</p>
+        </div>
+        <div class="step" id="step3">
+          <div class="step-circle">3</div>
+          <p>Info Identitas</p>
+        </div>
+        <div class="step" id="step4">
+          <div class="step-circle">4</div>
+          <p>Konfirmasi</p>
+        </div>
+        <div class="step" id="step5">
+          <div class="step-circle">5</div>
+          <p>Selesai</p>
+        </div>
+      </div>
+
+      <!-- Step Content -->
+      <div class="step-content" id="content1">
+        <h4>Info Destinasi</h4>
+        <p>Form untuk memilih destinasi</p>
+        <!-- Booking Start -->
+
+        <div class="container pb-5 mt-6 pb-5">
+          <div class="bg-light shadow" style="padding: 30px">
+            <div class="row align-items-center" style="min-height: 60px">
+              <div class="col-md-10">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="mb-3 mb-md-0">
+                      <select class="custom-select px-4" style="height: 47px">
+                        <option selected>Destination</option>
+                        <option value="1">Destination 1</option>
+                        <option value="2">Destination 2</option>
+                        <option value="3">Destination 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="mb-3 mb-md-0">
+                      <div class="date" id="date1" data-target-input="nearest">
+                        <input
+                          type="text"
+                          class="form-control p-4 datetimepicker-input"
+                          placeholder="Depart Date"
+                          data-target="#date1"
+                          data-toggle="datetimepicker"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="mb-3 mb-md-0">
+                      <div class="date" id="date2" data-target-input="nearest">
+                        <input
+                          type="text"
+                          class="form-control p-4 datetimepicker-input"
+                          placeholder="Return Date"
+                          data-target="#date2"
+                          data-toggle="datetimepicker"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="mb-3 mb-md-0">
+                      <select class="custom-select px-4" style="height: 47px">
+                        <option selected>Duration</option>
+                        <option value="1">Duration 1</option>
+                        <option value="2">Duration 2</option>
+                        <option value="3">Duration 3</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <button
+                  class="btn btn-primary btn-block"
+                  type="submit"
+                  style="height: 47px; margin-top: -2px"
+                  id="submitBtn"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Booking End -->
+      </div>
+      <div class="step-content" id="content2">
+        <h4>Info Kebutuhan</h4>
+        <p>Form untuk kebutuhan perjalanan</p>
+        <form>
+          <div class="form-group">
+            <label for="destination">1. Tujuan Perjalanan:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="destination"
+              placeholder="Masukkan tujuan perjalanan"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="departureDate">2. Tanggal Keberangkatan:</label>
+            <input
+              type="date"
+              class="form-control"
+              id="departureDate"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="returnDate">3. Tanggal Kembali:</label>
+            <input type="date" class="form-control" id="returnDate" required />
+          </div>
+          <div class="form-group">
+            <label for="duration">Durasi Perjalanan:</label>
+            <select class="form-control" id="duration" required>
+              <option value="">Pilih Durasi</option>
+              <option value="1">1 Hari</option>
+              <option value="2">2 Hari</option>
+              <option value="3">3 Hari</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="step-content" id="content3">
+        <h4>Info Identitas</h4>
+        <p>Form untuk memasukkan data identitas</p>
+      </div>
+      <div class="step-content" id="content4">
+        <h4>Konfirmasi</h4>
+        <p>Ringkasan data perjalanan</p>
+      </div>
+      <div class="step-content" id="content5">
+        <h4>Selesai</h4>
+        <p>Terima kasih! Pemesanan Anda selesai.</p>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="mt-4">
+        <button id="prevBtn" class="btn btn-secondary" disabled>
+          Previous
+        </button>
+        <button id="nextBtn" class="btn btn-primary">Next</button>
+      </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main Script -->
+    <script>
+      let currentStep = 1;
+      const totalSteps = 5;
+
+      // Update stepper and content
+      function updateStep(step) {
+        // Update stepper indicator
+        for (let i = 1; i <= totalSteps; i++) {
+          const stepElement = document.getElementById(`step${i}`);
+          // Toggle active class for the current step and previous steps
+          if (i <= step) {
+            stepElement.classList.add("active");
+            stepElement.classList.add("active-previous");
+          } else {
+            stepElement.classList.remove("active");
+            stepElement.classList.remove("active-previous");
+          }
+        }
+
+        // Update content visibility
+        for (let i = 1; i <= totalSteps; i++) {
+          const contentElement = document.getElementById(`content${i}`);
+          contentElement.style.display = i === step ? "block" : "none";
+        }
+
+        // Update navigation buttons
+        document.getElementById("prevBtn").disabled = step === 1;
+        document.getElementById("nextBtn").textContent =
+          step === totalSteps ? "Finish" : "Next";
+
+        currentStep = step;
+      }
+
+      // Handle Next button click
+      document.getElementById("nextBtn").addEventListener("click", function () {
+        if (currentStep < totalSteps) {
+          updateStep(currentStep + 1);
+        }
+      });
+
+      // Handle Previous button click
+      document.getElementById("prevBtn").addEventListener("click", function () {
+        if (currentStep > 1) {
+          updateStep(currentStep - 1);
+        }
+      });
+
+      // Handle Submit button in Booking Step
+      document
+        .getElementById("submitBtn")
+        .addEventListener("click", function () {
+          // Hide Booking content and show the next step
+          document.querySelector(".booking").style.display = "none";
+          updateStep(2); // Move to step 2
+        });
+
+      // Initialize first step
+      updateStep(currentStep);
+    </script>
+
+    <div
+      class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5"
+      style="margin-top: 90px"
+    >
+      <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <a href="" class="navbar-brand">
+            <img
+              src="img/X3O Samping-Putih.png"
+              alt="X3 Organizer Logo"
+              style="max-width: 200px; height: auto"
+            />
+          </a>
+          <p class="mt-4">
+            Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore
+            rebum lorem ipsum dolor. No sed vero lorem dolor dolor
+          </p>
+          <h6
+            class="text-white text-uppercase mt-4 mb-3"
+            style="letter-spacing: 5px"
+          >
+            Follow Us
+          </h6>
+          <div class="d-flex justify-content-start">
+            <a
+              class="btn btn-outline-primary btn-square"
+              href="https://www.instagram.com/x3organizer/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Our Services
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>About</a
+            >
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Destination</a
+            >
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Services</a
+            >
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Packages</a
+            >
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Guides</a
+            >
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Testimonial</a
+            >
+            <a class="text-white-50" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Blog</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Useful Links
+          </h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>About</a
+            >
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Destination</a
+            >
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Services</a
+            >
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Packages</a
+            >
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Guides</a
+            >
+            <a class="text-white-50 mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Testimonial</a
+            >
+            <a class="text-white-50" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Blog</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Contact Us
+          </h5>
+          <p>
+            <i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA
+          </p>
+          <p><i class="fa fa-phone-alt mr-2"></i>0823-3745-77110</p>
+          <p><i class="fa fa-envelope mr-2"></i>admin@xthreeorganizer.com</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
